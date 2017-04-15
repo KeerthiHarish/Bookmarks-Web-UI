@@ -1,0 +1,17 @@
+input, textarea {
+  padding: 4px 8px;
+  margin-bottom: 10px;
+}
+
+.myClass {
+  background-color: red;
+}
+
+.rt-cell {
+  display: inline-block;
+}
+
+.closeBtn {
+  float: right;
+  margin: -7px -15px;
+}
