@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export function fetchFolders() {
   return function(dispatch) {
-    axios.get("http://localhost:4000/folders")
+    axios.get("https://bookmarks-rest-api.herokuapp.com/folders")
       .then((response) => {
         dispatch({type: "FETCH_FOLDERS_FULFILLED", payload: response.data})
       })
@@ -14,7 +14,7 @@ export function fetchFolders() {
 
 export function createFolder(name) {
   return function(dispatch) {
-    axios.post("http://localhost:4000/folders", {
+    axios.post("https://bookmarks-rest-api.herokuapp.com/folders", {
       name
     }).then((response) => {
         dispatch({type: "CREATE_FOLDERS_FULFILLED", payload: response.data})
@@ -30,7 +30,7 @@ export function createFolder(name) {
 
 export function deleteFolder(id) {
   return function(dispatch) {
-    axios.delete(`http://localhost:4000/folders/${id}`)
+    axios.delete(`https://bookmarks-rest-api.herokuapp.com/folders/${id}`)
       .then((response) => {
         dispatch({type: "DELETE_FOLDER_FULFILLED", payload: response.data})
       })

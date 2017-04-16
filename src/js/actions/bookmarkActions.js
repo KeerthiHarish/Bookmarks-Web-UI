@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export function fetchBookmarks() {
   return function(dispatch) {
-    axios.get("http://localhost:4000/bookmarks")
+    axios.get("https://bookmarks-rest-api.herokuapp.com/bookmarks")
       .then((response) => {
         dispatch({type: "FETCH_BOOKMARKS_FULFILLED", payload: response.data})
       })
@@ -14,7 +14,7 @@ export function fetchBookmarks() {
 
 export function createBookmark(title, bookmarkURL, folder) {
   return function(dispatch) {
-    axios.post("http://localhost:4000/bookmarks", {
+    axios.post("https://bookmarks-rest-api.herokuapp.com/bookmarks", {
       title,
       bookmarkURL,
       folder
@@ -32,7 +32,7 @@ export function createBookmark(title, bookmarkURL, folder) {
 
 export function deleteBookmark(id) {
   return function(dispatch) {
-    axios.delete(`http://localhost:4000/bookmarks/${id}`)
+    axios.delete(`https://bookmarks-rest-api.herokuapp.com/bookmarks/${id}`)
       .then((response) => {
         dispatch({type: "DELETE_BOOKMARKS_FULFILLED", payload: response.data})
       })
@@ -47,7 +47,7 @@ export function deleteBookmark(id) {
 
 export function associateBookmarkWithFolder(folder, bookmark) {
   return function(dispatch) {
-    axios.put(`http://localhost:4000/bookmarks/${bookmark}/folder/${folder}`)
+    axios.put(`https://bookmarks-rest-api.herokuapp.com/bookmarks/${bookmark}/folder/${folder}`)
       .then((response) => {
         dispatch({type: "ASSOCIATE_BOOKMARK_FOLDER_FULFILLED", payload: response.data})
       })
