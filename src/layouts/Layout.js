@@ -6,7 +6,7 @@ import { fetchFolders } from "../actions/folderActions"
 
 import { PageHeader, Col, Row, Tab, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 
-import styles from '../../client.css';
+import styles from '../client.css';
 
 import BookmarkModal from '../components/BookmarkModal';
 import FolderModal from '../components/FolderModal';

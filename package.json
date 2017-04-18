@@ -36,7 +36,7 @@
     "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node ./src/init.js"
+    "start": "node init.js"
   },
   "author": "",
   "license": "ISC"
