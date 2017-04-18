@@ -10,7 +10,7 @@ export default class BookmarkLayout extends React.Component {
         return (
           <BookmarkCard key={bookmark._id} bookmark={bookmark} {...this.props}/>
         )
-      })): (<p className="text-center">No notes found</p>)
+      })): (<p className="text-center">No Bookmarks found</p>)
     return (
       <div>
         {bookmarkContainer}
